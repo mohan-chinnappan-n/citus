@@ -196,8 +196,7 @@ SET client_min_messages = LOG;
 -- join on int column, and be empty." While removing broadcast logic, we
 -- manually make the query router plannable.
 SELECT * FROM repartition_udt JOIN repartition_udt_other
-    ON repartition_udt.pk = repartition_udt_other.pk
-	WHERE repartition_udt.pk = 1;
+    ON repartition_udt.pk = repartition_udt_other.pk;
 
 -- Query that should result in a repartition join on UDT column.
 SET citus.large_table_shard_count = 1;
