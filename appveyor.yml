@@ -84,6 +84,8 @@ build_script:
 before_test:
   - ps: cd C:\projects\postgres\src\tools\msvc
   - install C:\projects\pgsql
+  - cd C:\projects\postgres\contrib\citus\src\backend\distributed
+  - copy citus--*.sql C:\projects\pgsql\share\extension\
 
 test_script:
   - ps: cd C:\projects\postgres\contrib\citus\src\test\regress
