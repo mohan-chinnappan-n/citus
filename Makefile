@@ -1,9 +1,5 @@
 # Citus toplevel Makefile
 
-EXTENSION = citus
-DATA = citus--7.0-15.sql
-
-
 MODULE_big = citus
 
 OBJS = src/backend/distributed/shared_library_init.o \
@@ -107,8 +103,6 @@ OBJS = src/backend/distributed/shared_library_init.o \
      src/backend/distributed/worker/worker_truncate_trigger_protocol.o \
      $(WIN32RES)
 
-EXTENSION=
-DATA=
 MODULE_big=
 OBJS=
 
