@@ -131,6 +131,11 @@ extern Oid CitusReadIntermediateResultFuncId(void);
 extern Oid CitusExtraDataContainerFuncId(void);
 extern Oid CitusWorkerHashFunctionId(void);
 
+
+extern Oid CitusTextSendAsJsonbFunctionId(void);
+extern Oid TextOutFunctionId(void);
+
+
 /* enum oids */
 extern Oid PrimaryNodeRoleId(void);
 extern Oid SecondaryNodeRoleId(void);
