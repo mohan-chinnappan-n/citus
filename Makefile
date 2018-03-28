@@ -1,7 +1,7 @@
 # Citus toplevel Makefile
 
 EXTENSION = citus
-DATA = citus--7.3-4.sql
+DATA = citus--7.3-3.sql
 
 MODULE_big = citus
 
