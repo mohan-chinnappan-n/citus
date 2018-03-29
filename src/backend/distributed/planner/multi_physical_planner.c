@@ -318,7 +318,7 @@ BuildJobTree(MultiTreeRoot *multiTree)
 		if (currentNodeType == T_MultiJoin)
 		{
 			MultiJoin *joinNode = (MultiJoin *) currentNode;
-			if (joinNode->joinRuleType == SINGLE_PARTITION_JOIN ||
+			if (joinNode->joinRuleType == SINGLE_RANGE_PARTITION_JOIN ||
 				joinNode->joinRuleType == DUAL_PARTITION_JOIN)
 			{
 				boundaryNodeJobType = JOIN_MAP_MERGE_JOB;
@@ -348,7 +348,7 @@ BuildJobTree(MultiTreeRoot *multiTree)
 			PartitionType partitionType = PARTITION_INVALID_FIRST;
 			Oid baseRelationId = InvalidOid;
 
-			if (joinNode->joinRuleType == SINGLE_PARTITION_JOIN)
+			if (joinNode->joinRuleType == SINGLE_RANGE_PARTITION_JOIN)
 			{
 				partitionType = RANGE_PARTITION_TYPE;
 				baseRelationId = RangePartitionJoinBaseRelationId(joinNode);
