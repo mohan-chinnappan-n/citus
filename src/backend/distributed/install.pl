@@ -16,6 +16,10 @@ die "need a single argument saying where to install the sql files\n" if ($argcou
 my $prefix = $ARGV[0];
 die "install destination must exist!\n" unless (-e $prefix);
 my $dest = catdir($prefix, "share/postgresql/extension");
+unless (-e $dest)
+{
+  $dest = catdir($prefix, "share/extension");
+}
 die "install destination must be a postgres installation!\n" unless (-e $dest);
 
 # 1) check that we're installing into the real postgres installation
