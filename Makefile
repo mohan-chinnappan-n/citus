@@ -80,6 +80,7 @@ OBJS = src/backend/distributed/shared_library_init.o \
      src/backend/distributed/utils/citus_outfuncs.o \
      src/backend/distributed/utils/citus_readfuncs.o \
      src/backend/distributed/utils/citus_ruleutils.o \
+     src/backend/distributed/utils/citus_version.o \
      src/backend/distributed/utils/colocation_utils.o \
      src/backend/distributed/utils/distribution_column.o \
      src/backend/distributed/utils/errormessage.o \
