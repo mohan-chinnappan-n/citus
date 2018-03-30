@@ -86,3 +86,7 @@ before_test:
 test_script:
   - ps: cd C:\projects\postgres\contrib\citus\src\test\regress
   - perl pg_regress_multi.pl --bindir=C:\projects\pgsql\bin --load-extension=citus -- --schedule=multi_schedule
+
+after_test:
+  - ps: cd C:\projects\postgres\contrib\citus\src\test\regress
+  - type regression.diffs
