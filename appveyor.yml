@@ -81,7 +81,7 @@ before_test:
   - install C:\projects\pgsql
   - cd C:\projects\postgres\contrib\citus\src\backend\distributed
   - copy citus--*.sql C:\projects\pgsql\share\extension\
-  - install.pl C:\projects\pgsql
+  - perl install.pl C:\projects\pgsql
 
 test_script:
   - ps: cd C:\projects\postgres\contrib\citus\src\test\regress
